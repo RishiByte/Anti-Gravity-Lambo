@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: var(--font-orbitron);
+  --font-rajdhani: var(--font-rajdhani);
+
+  --color-pagani-black: #1a1a1a;
+  --color-pagani-gold: #D4AF37;
+  --color-bright-gold: #FFD700;
+  --color-carbon-gray: #2a2a2a;
+}
+
+body {
+  @apply bg-pagani-black text-white selection:bg-pagani-gold selection:text-pagani-black antialiased;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-pagani-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-pagani-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bright-gold);
+}
